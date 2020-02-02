@@ -19,8 +19,8 @@ class TarjetaFruta extends React.Component {
     }
 
     render () {
-        hasItems = this.state.cantidad > 0
-        classes = hasItems ? 'TarjetaFruta-activa' : 'TarjetaFruta'
+        var hasItems = this.state.cantidad > 0
+        var classes = `TarjetaFruta ${ hasItems ? 'TarjetaFruta-activa' : '' }`
         return (<div className={classes}>
             <h3>{this.props.name}</h3>
             <hr />
